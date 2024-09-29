@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post Hunter</title>
+    
+    <!-- Load stylesheets first -->
+    <link rel="stylesheet" href="./stylesheet.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="./popup.css"> -->
+
+    <!-- Load scripts after stylesheets -->
+    <script src="popup.js"></script>
+    <script src="content.js"></script>
+
+</head>
+<body>
+    <main>
+        <div class="logo-container">
+            <img src="/assetes/main_logo.jpg" alt="" width="150px" />
+        </div>
+
+        <!-- <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" value="true" id="toggleVisibility" />
+                <span class="slider round"></span>
+            </label>
+        </div> -->
+
+        <div class="tab-container">
+            <div id="positive-button-wrapper" class="inner-tab-btn-div active" >
+                <a href="#" id="positive-button" class="tab-button">Positive</a>
+                <span class="counter-box counter-box-positive">6</span>
+            </div>
+            
+            <div id="negative-button-wrapper" class="inner-tab-btn-div" >
+                <a href="#" id="negative-button" class="tab-button">Negative</a>
+                <span class="counter-box counter-box-negative">6</span>
+            </div>
+        </div>
+        
+        <div id="positive-content" class="tab-content active">
+            <div class="list-item">
+                <div>
+                    <span>Hunterd by</span> 
+                    <img src="./assetes/girl_imoji.jpg" />  
+                    <span>Annette Steward</span> 
+                    <img src="./assetes/blue_arrow.jpg" />   
+                    <span>@SethCampbell</span>   
+                    <span>&#8226;</span>   
+                    <span>14s</span>  
+                </div>
+                
+                <div class="link">
+                    https://x.com/daardos/status/1738143765611565335?s=20
+                </div>
+            </div>
+
+            <div class="list-item">
+                <div>
+                    <span>Hunterd by</span> 
+                    <img src="./assetes/girl_imoji.jpg" />  
+                    <span>Annette Steward</span> 
+                    <img src="./assetes/blue_arrow.jpg" />   
+                    <span>@SethCampbell</span>   
+                    <span>&#8226;</span>   
+                    <span>14s</span>  
+                </div>
+                
+                <div class="link">
+                    https://x.com/daardos/status/1738143765611565335?s=20
+                </div>
+            </div>
+        </div>
+    
+        <div id="negative-content" class="tab-content">
+        </div>
+
+        <div class="bottom-div">
+            <button class="download-button">
+                <img class="download-img" src="/assetes/download.jpg" alt="" />Download Report
+            </button>
+          </div>
+    </main>
+</body>
+</html>

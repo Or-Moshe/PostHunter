@@ -1,0 +1,284 @@
+/* The switch - the box around the slider */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  /*width: fit-content;*/
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.4rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 16px;
+  height: -webkit-fill-available;
+}
+
+#notifications_positives_icon_container,
+#notifications_reports_icon_container {
+  display: none;
+}
+
+/* The switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.logo-container{
+  margin-bottom: 8px;
+}
+
+.switch-container{
+  /*margin-bottom: 30px;*/
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.box {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+/* Basic styling for the links */
+.link-list {
+  list-style: none;
+  overflow-y: auto;
+  max-height: 61vh;
+}
+
+.link-list li {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflow text */
+  text-overflow: ellipsis; 
+}
+
+.link-list li::after {
+  width: 100%; /* Display the underline on hover */
+}
+
+.link-list a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+/* Custom scrollbar styles */
+.tab-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 6px;
+}
+
+.tab-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.list-item{
+  border-bottom: 1px solid #EFF3F4;
+  margin-block: 6px;
+  padding: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-container{
+  margin-bottom: 8px;
+  display: inline-flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-index{
+  margin-inline-end: 10px;
+}
+
+.date-container{
+  margin-inline-start: 18px;
+  margin-top: 5px;
+}
+
+.date{
+  margin-inline-end: 5px;
+}
+
+.data-container {
+  width: -webkit-fill-available;
+}
+
+/* Style the tab */
+.tab-container {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  width: 100%;
+  border-bottom: 2px solid #C1C1C1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inner-tab-btn-div{
+  width: 50%;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent; /* Initially no underline */
+
+  font-size: 16px;
+  font-style: normal;
+  line-height: 78%; /* 12.48px */
+  letter-spacing: -0.96px;
+}
+
+.inner-tab-btn-div.active {
+  border-bottom-color: blue; /* Add blue underline for active tab */
+  font-weight: 600;
+}
+
+/*.tab-button.active {
+  border-bottom-color: blue; 
+  font-weight: 600;
+}*/
+
+.counter-box{
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50%;
+  color: white;
+}
+
+.counter-box-positive{
+  background-color: #09B48A;
+}
+
+.counter-box-negative{
+  background-color: #E44D4D;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  /*padding: 20px;*/
+}
+
+.tab-content.active {
+  display: block;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.download-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.bottom-div {
+  margin-top: auto; /* Push the div to the end of the main */
+  text-align: center;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.download-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.download-img{
+  margin-inline-end: 5px;
+}
+
+.message{
+  display: none;
+}
+
+/*************************************************************/
+.link{
+  margin-top: 10px;
+}

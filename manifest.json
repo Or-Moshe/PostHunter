@@ -1,0 +1,54 @@
+    {
+        "manifest_version": 3,
+        "name": "Post Hunter",
+        "version": "3.1",
+        "description": "Browser Extension for Flagging Anti-Semitic/Anti-Israeli Posts and Tweets, Prompting Users to Report Them.\nFor posts and tweets supporting Israel, users will receive a suggestion for sharing and liking.",
+        "permissions": [
+            "storage",
+            "tabs", 
+            "windows",
+            "webNavigation"
+        ],
+        "content_scripts": [
+            {
+                "matches": ["https://twitter.com/*"],
+                "js": [ 
+                    "./scripts/helper.js", 
+                    "./scripts/modal.js", 
+                    "./scripts/twitter_logic.js", 
+                    "./scripts/db.js",
+                    "./scripts/twitter_ui.js", 
+                    "./scripts/facebook_ui.js", 
+                    "./scripts/manager.js", 
+                    "content.js"
+                ],
+                "css": [
+                    "./styles/modal.css",
+                    "./styles/content.css"],
+                "run_at": "document_start",
+                "all_frames": true
+            }
+        ],
+        "action": {
+
+            "default_icon": {
+                "128": "extension_icon.png"
+            }
+        },
+        "icons": {
+            "128": "extension_icon.png"
+        },
+        "background": {
+            "service_worker": "background.js"
+        },
+        "web_accessible_resources": [
+            {
+                "resources": [
+                    "assetes/*"  
+                ],
+                "matches": [
+                    "https://twitter.com/*"
+                ]
+            }
+        ]
+    }
